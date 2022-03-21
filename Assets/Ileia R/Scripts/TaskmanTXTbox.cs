@@ -2,18 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class TaskmanTXTbox : MonoBehaviour
 {
     public GameObject player;
     int curtext = 0;
     private GameObject textobj;
 
+    public GameObject txt;
     public GameObject RootObjectOfHFactsTextBox;
     public bool isTalking;
 
     public bool doingTask1;
     public bool doingTask2;
     public bool doingTask3;
+
+    public bool doneTask1;
+    public bool doneTask2;
+    public bool doneTask3;
 
     public string Text1 = "Do whatever you want";
     public string Text2 = "Do whatever I want";
@@ -25,6 +31,10 @@ public class TaskmanTXTbox : MonoBehaviour
     void Start()
     {
         RootObjectOfHFactsTextBox.SetActive(false);
+
+        txt.GetComponent<Text>().text = txt.text;
+
+
     }
 
     void Update()
@@ -49,6 +59,11 @@ public class TaskmanTXTbox : MonoBehaviour
                 RootObjectOfHFactsTextBox.SetActive(false);
                 time -= Time.deltaTime;
             }
+        }
+
+        if(doneTask1 == true && doingTask2 == false && doingTask3 == false)
+        {
+            txt.Text = "good job doing task 1, now pick one of these tasks \n 2.) Go and do something else \n 3.) idk";
         }
     }
 
