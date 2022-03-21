@@ -42,6 +42,5 @@ public class GoodPlayerMovement : MonoBehaviour
     {
         rb.velocity = moveVelocity;
 
-
     }
 }
