@@ -747,7 +747,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 485353526}
-  m_LocalRotation: {x: 0.0766653, y: 0.80086404, z: -0.5845571, w: 0.10503415}
+  m_LocalRotation: {x: 0.07666528, y: 0.80086404, z: -0.5845571, w: 0.105034135}
   m_LocalPosition: {x: -0.97764426, y: 26.73, z: 4.252926}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -1485,7 +1485,6 @@ GameObject:
   - component: {fileID: 1867498883}
   - component: {fileID: 1867498882}
   - component: {fileID: 1867498881}
-  - component: {fileID: 1867498880}
   m_Layer: 0
   m_Name: Taskman
   m_TagString: TaskMan
@@ -1493,32 +1492,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1867498880
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1867498879}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb26e065b59d90448bb42b30a177a882, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 2067131346}
-  txt: {fileID: 133067642}
-  RootObjectOfHFactsTextBox: {fileID: 2092167907}
-  isTalking: 0
-  doingTask1: 0
-  doingTask2: 0
-  doingTask3: 0
-  doneTask1: 0
-  doneTask2: 0
-  doneTask3: 0
-  Text1: Do whatever you want
-  Text2: Do whatever I want
-  Text3: leave
-  time: 3
 --- !u!65 &1867498881
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1817,7 +1790,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1894020986}
-  m_LocalRotation: {x: 0.074747175, y: 0.81133693, z: -0.56993216, w: 0.10640765}
+  m_LocalRotation: {x: 0.07474715, y: 0.81133693, z: -0.56993216, w: 0.10640761}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2004,7 +1977,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2067131347}
-  - component: {fileID: 2067131349}
   - component: {fileID: 2067131348}
   m_Layer: 0
   m_Name: Player
@@ -2044,21 +2016,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 4
   m_CollisionDetection: 0
---- !u!114 &2067131349
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2067131346}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85d7de056a3b3bd4a8c1bea5c04a1e30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 5
-  rb: {fileID: 0}
-  cam: {fileID: 0}
 --- !u!1 &2092167907
 GameObject:
   m_ObjectHideFlags: 0
