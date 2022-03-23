@@ -22,7 +22,8 @@ public class JimsCrazySolution : MonoBehaviour
     void Start()
 
     {
-        offset = Random.Range(1, 5);
+        offset = Random.Range(1, 30);
+        offset = offset / 100;
         patrolPath = 0;
 
         patrolPoints = patrolPts.ToArray();
