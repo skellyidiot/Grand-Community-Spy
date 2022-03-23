@@ -127,6 +127,22 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 156226277}
   m_PrefabAsset: {fileID: 0}
+--- !u!58 &12870197
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 12870196}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!4 &12870202 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 477830869458191774, guid: ddde1fd30d8c37b458f9e21a766b0ead,
@@ -657,6 +673,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 477830868684033770, guid: ddde1fd30d8c37b458f9e21a766b0ead,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 477830869458191762, guid: ddde1fd30d8c37b458f9e21a766b0ead,
         type: 3}
       propertyPath: m_Name
@@ -728,7 +749,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 477830869458191775, guid: ddde1fd30d8c37b458f9e21a766b0ead,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 477830869458191775, guid: ddde1fd30d8c37b458f9e21a766b0ead,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 477830869458191775, guid: ddde1fd30d8c37b458f9e21a766b0ead, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ddde1fd30d8c37b458f9e21a766b0ead, type: 3}
 --- !u!1 &247049452
 GameObject:
