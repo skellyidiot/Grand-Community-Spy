@@ -6,6 +6,7 @@ using UnityEngine.Animations;
 public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed = 5f;
+    public bool HasGunOut = false;
 
     public Rigidbody2D rb;
     public Camera cam;
@@ -48,6 +49,17 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             ani.SetBool("Moving", false);
+        }
+
+        if (Input.GetMouseButtonDown(1))
+        {
+            ani.SetBool("HasGunOut", true);
+            HasGunOut = true;
+        }
+        else if (Input.GetMouseButtonUp(1))
+        {
+            ani.SetBool("HasGunOut", false);
+            HasGunOut = false;
         }
 
         //Vector2 rmos = new Vector2(Mathf.Round(mousePos.normalized.x), Mathf.Round(mousePos.normalized.y));
