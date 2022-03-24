@@ -11,10 +11,14 @@ public class Car : MonoBehaviour
     public float carXR;
     public float carYR;
     public float carZR;
+
+    public GameObject RootObjectOfHFactsTextBox;
+
     // Start is called before the first frame update
     void Start()
     {
         isDriving = false;
+        RootObjectOfHFactsTextBox.SetActive(false);
 
         car = GameObject.FindGameObjectWithTag("car");
         carXR = car.transform.rotation.x;
@@ -25,10 +29,18 @@ public class Car : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(isDriving == true)
+        {
+            RootObjectOfHFactsTextBox.SetActive(false);
+
+        }
     }
     private void OnCollisionStay2D(Collision2D collision)
     {
+        if(collision.gameObject.tag == "car" && isDriving == false)
+        {
+            RootObjectOfHFactsTextBox.SetActive(true);
+        }
         if (Input.GetKey(KeyCode.E))
         {
             Debug.Log("Car");
@@ -42,5 +54,9 @@ public class Car : MonoBehaviour
             }
         }
         
+    }
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        RootObjectOfHFactsTextBox.SetActive(false);
     }
 }
