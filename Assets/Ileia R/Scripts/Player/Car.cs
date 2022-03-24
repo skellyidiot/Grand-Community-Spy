@@ -8,9 +8,15 @@ public class Car : MonoBehaviour
 
     public GameObject car;
 
-    public float carXR;
-    public float carYR;
-    public float carZR;
+    public GameObject GetOut; 
+
+    private float carXR;
+    private float carYR;
+    private float carZR;
+
+    private float carX;
+    private float carY;
+    private float carZ;
 
     public GameObject RootObjectOfHFactsTextBox;
 
@@ -24,6 +30,10 @@ public class Car : MonoBehaviour
         carXR = car.transform.rotation.x;
         carYR = car.transform.rotation.y;
         carZR = car.transform.rotation.z;
+
+        carX = car.transform.position.x;
+        carY = car.transform.position.y;
+        carZ = car.transform.position.z;
     }
 
     // Update is called once per frame
@@ -33,6 +43,19 @@ public class Car : MonoBehaviour
         {
             RootObjectOfHFactsTextBox.SetActive(false);
 
+        }
+        if(isDriving == true && Input.GetKey(KeyCode.F))
+        {
+            if (isDriving == true)
+            {
+                carX = car.transform.position.x - .2F;
+                carY = car.transform.position.y;
+                carZ = car.transform.position.z;
+
+                GetOut.transform.position = new Vector3(carX, carY, carZ);
+                gameObject.transform.position = GetOut.transform.position;
+                car.transform.parent = null;
+            }
         }
     }
     private void OnCollisionStay2D(Collision2D collision)
@@ -49,14 +72,20 @@ public class Car : MonoBehaviour
                 gameObject.transform.position = car.transform.position;
                 gameObject.transform.rotation = Quaternion.Euler(carXR, carYR, carZR);
                 car.transform.SetParent(gameObject.transform);
-                //car.transform.localScale = new Vector3(6.5F, 6.5F, 1F);
+                WaitForSeconds();
                 isDriving = true;
             }
+            
         }
         
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
         RootObjectOfHFactsTextBox.SetActive(false);
+    }
+
+    IEnumerable WaitForSeconds()
+    {
+        yield return new WaitForSeconds(.5F);
     }
 }
