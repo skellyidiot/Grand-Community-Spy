@@ -31,7 +31,7 @@ public class TaskmanTXTbox : MonoBehaviour
     {
         RootObjectOfHFactsTextBox.SetActive(false);
 
-        txt.GetComponentInChildren<UnityEngine.UI.Text>().text = "Hey, I am task man, which task do you want to do? \n 1.) Go kill some pedestrian \n 2.) Go and do something else \n 3.) idk";
+        txt.GetComponentInChildren<UnityEngine.UI.Text>().text = "Hey, I am task man, which task do you want to do? \n 1.) Go steal the art \n 2.) Go and do something else \n 3.) idk";
     }
 
     void Update()
@@ -78,7 +78,7 @@ public class TaskmanTXTbox : MonoBehaviour
         }
         if (doneTask1 == false && doneTask2 == true && doneTask3 == false && doingTask3 == false && doingTask1 == false)
         {
-            txt.text = "good job doing task 2, you can only do this task: \n 1.) Go kill some pedestrian \n 3.) idk";
+            txt.text = "good job doing task 2, you can only do this task: \n 1.) Go steal the art  \n 3.) idk";
         }
         if (doneTask1 == true && doneTask3 == true && doneTask2 != true && doingTask2 != true)
         {
@@ -86,11 +86,11 @@ public class TaskmanTXTbox : MonoBehaviour
         }
         if(doneTask2 == true && doneTask3 == true && doneTask1 != true && doingTask1 != true)
         {
-            txt.text = "Good job doing task 2 and task 3, now do this task: \n 1.) Go kill some pedestrian";
+            txt.text = "Good job doing task 2 and task 3, now do this task: \n 1.) Go steal the art ";
         }
         if (doneTask2 != true && doneTask3 == true && doneTask1 != true && doingTask1 != true && doingTask2 != true)
         {
-            txt.text = "Good job doing task 3, now do this task: \n 1.) Go kill some pedestrian \n 2.) Go and do something else)";
+            txt.text = "Good job doing task 3, now do this task: \n 1.) Go steal the art  \n 2.) Go and do something else)";
         }
         if(doneTask1 == true && doneTask2 == true && doneTask3 == true)
         {
