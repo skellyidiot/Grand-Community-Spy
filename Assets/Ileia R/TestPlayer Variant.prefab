@@ -27,6 +27,27 @@ PrefabInstance:
       propertyPath: m_Name
       value: TestPlayer Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 7019002722345139736, guid: d804c68a2522c384cb39f6ab64f0154a,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -2311659948842064771, guid: a93dda7466a480c4a9bd5ab7424fea64,
+        type: 3}
+    - target: {fileID: 7019002722345139738, guid: d804c68a2522c384cb39f6ab64f0154a,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7019002722345139739, guid: d804c68a2522c384cb39f6ab64f0154a,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7019002722345139739, guid: d804c68a2522c384cb39f6ab64f0154a,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8269743309407387414, guid: d804c68a2522c384cb39f6ab64f0154a,
         type: 3}
       propertyPath: rb
