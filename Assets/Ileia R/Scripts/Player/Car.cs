@@ -55,6 +55,8 @@ public class Car : MonoBehaviour
                 GetOut.transform.position = new Vector3(carX, carY, carZ);
                 gameObject.transform.position = GetOut.transform.position;
                 car.transform.parent = null;
+
+                isDriving = false;
             }
         }
     }

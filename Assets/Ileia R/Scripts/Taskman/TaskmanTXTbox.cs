@@ -22,16 +22,16 @@ public class TaskmanTXTbox : MonoBehaviour
     public bool doneTask2;
     public bool doneTask3;
 
-    public string Text1 = "Do whatever you want";
-    public string Text2 = "Do whatever I want";
-    public string Text3 = "leave";
+    private string Text1 = "Do whatever you want";
+    private string Text2 = "Do whatever I want";
+    private string Text3 = "leave";
 
     // Start is called before the first frame update
     void Start()
     {
         RootObjectOfHFactsTextBox.SetActive(false);
 
-        txt.GetComponentInChildren<UnityEngine.UI.Text>().text = "Hey, I am task man, which task do you want to do? \n 1.) Go steal the art \n 2.) Go and do something else \n 3.) idk";
+        txt.GetComponentInChildren<UnityEngine.UI.Text>().text = "Hey, I am task man, which task do you want to do? \n 1.) Go steal some information about the enemy \n 2.) Go and do something else \n 3.) idk";
     }
 
     void Update()
@@ -78,7 +78,7 @@ public class TaskmanTXTbox : MonoBehaviour
         }
         if (doneTask1 == false && doneTask2 == true && doneTask3 == false && doingTask3 == false && doingTask1 == false)
         {
-            txt.text = "good job doing task 2, you can only do this task: \n 1.) Go steal the art  \n 3.) idk";
+            txt.text = "good job doing task 2, you can only do this task: \n 1.) Go steal some information about the enemy  \n 3.) idk";
         }
         if (doneTask1 == true && doneTask3 == true && doneTask2 != true && doingTask2 != true)
         {
@@ -86,11 +86,11 @@ public class TaskmanTXTbox : MonoBehaviour
         }
         if(doneTask2 == true && doneTask3 == true && doneTask1 != true && doingTask1 != true)
         {
-            txt.text = "Good job doing task 2 and task 3, now do this task: \n 1.) Go steal the art ";
+            txt.text = "Good job doing task 2 and task 3, now do this task: \n 1.) Go steal some information about the enemy ";
         }
         if (doneTask2 != true && doneTask3 == true && doneTask1 != true && doingTask1 != true && doingTask2 != true)
         {
-            txt.text = "Good job doing task 3, now do this task: \n 1.) Go steal the art  \n 2.) Go and do something else)";
+            txt.text = "Good job doing task 3, now do this task: \n 1.) Go steal some information about the enemy  \n 2.) Go and do something else)";
         }
         if(doneTask1 == true && doneTask2 == true && doneTask3 == true)
         {
