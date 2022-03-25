@@ -8,7 +8,11 @@ public class Car : MonoBehaviour
 
     public GameObject car;
 
-    public GameObject GetOut; 
+    public GameObject GetOut;
+
+    private float carXS;
+    private float carYS;
+    private float carZS;
 
     private float carXR;
     private float carYR;
@@ -27,6 +31,11 @@ public class Car : MonoBehaviour
         RootObjectOfHFactsTextBox.SetActive(false);
 
         car = GameObject.FindGameObjectWithTag("car");
+
+        carXS = car.transform.localScale.x;
+        carYS = car.transform.localScale.y;
+        carZS = car.transform.localScale.z;
+
         carXR = car.transform.rotation.x;
         carYR = car.transform.rotation.y;
         carZR = car.transform.rotation.z;
@@ -55,7 +64,6 @@ public class Car : MonoBehaviour
                 GetOut.transform.position = new Vector3(carX, carY, carZ);
                 gameObject.transform.position = GetOut.transform.position;
                 car.transform.parent = null;
-
                 isDriving = false;
             }
         }
@@ -74,12 +82,11 @@ public class Car : MonoBehaviour
                 gameObject.transform.position = car.transform.position;
                 gameObject.transform.rotation = Quaternion.Euler(carXR, carYR, carZR);
                 car.transform.SetParent(gameObject.transform);
+                car.transform.localScale = new Vector3(carXS, 4.3F, carZS);
                 WaitForSeconds();
                 isDriving = true;
-            }
-            
+            }   
         }
-        
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
