@@ -18,7 +18,7 @@ public class TaskmanTXTbox : MonoBehaviour
     public bool doingTask2;
     public bool doingTask3;
 
-    public bool doneTask1;
+    public static bool doneTask1;
     public bool doneTask2;
     public bool doneTask3;
 

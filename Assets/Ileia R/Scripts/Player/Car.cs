@@ -82,7 +82,7 @@ public class Car : MonoBehaviour
                 gameObject.transform.position = car.transform.position;
                 gameObject.transform.rotation = Quaternion.Euler(carXR, carYR, carZR);
                 car.transform.SetParent(gameObject.transform);
-                car.transform.localScale = new Vector3(carXS, 4.3F, carZS);
+                car.transform.localScale = new Vector3(carXS, carYS, carZS);
                 WaitForSeconds();
                 isDriving = true;
             }   
