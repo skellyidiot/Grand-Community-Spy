@@ -10,6 +10,8 @@ TagManager:
   - info
   - Leader
   - DropOff
+  - DoorIn
+  - DoorOut
   layers:
   - Default
   - TransparentFX
