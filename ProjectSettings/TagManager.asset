@@ -6,8 +6,10 @@ TagManager:
   tags:
   - TaskMan
   - Bullet
-  - art
   - car
+  - info
+  - Leader
+  - DropOff
   layers:
   - Default
   - TransparentFX
@@ -40,7 +42,7 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - car
   m_SortingLayers:
   - name: Default
     uniqueID: 0

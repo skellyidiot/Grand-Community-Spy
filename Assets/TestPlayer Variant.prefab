@@ -140,11 +140,13 @@ GameObject:
   m_Component:
   - component: {fileID: 4441827827095735409}
   - component: {fileID: 4441827827095735411}
+  - component: {fileID: 3990227730043175829}
   - component: {fileID: 8495108820560607468}
   - component: {fileID: 4441827827095735422}
   - component: {fileID: 4441827827095735423}
   - component: {fileID: 4441827827095735420}
   - component: {fileID: 4252825742984001855}
+  - component: {fileID: 8675589468588892221}
   - component: {fileID: 4252825742984001841}
   - component: {fileID: 4252825742984001847}
   - component: {fileID: 4252825742984001844}
@@ -222,6 +224,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3990227730043175829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4441827827095735421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 432f36caba2f8a349bcf458fb7638a29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  infosteal: {fileID: 0}
+  leader: {fileID: 0}
+  LeaderInCar: 0
+  dropOff: {fileID: 0}
+  taskmanScript: {fileID: 0}
+  carScript: {fileID: 0}
 --- !u!114 &8495108820560607468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -234,8 +254,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1632b654c55dc714ca1259cb6c978877, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isDriving: 0
-  car: {fileID: 0}
   GetOut: {fileID: 0}
   RootObjectOfHFactsTextBox: {fileID: 0}
 --- !u!114 &4441827827095735422
@@ -307,6 +325,22 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &8675589468588892221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4441827827095735421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a374a82ff0e8c24c8f1db735f5ba503, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpawnINBUILDING: {fileID: 0}
+  SpawnNOTINBUILDING: {fileID: 0}
+  isInBuilding: 0
+  hasAlreadyGoneIn: 0
 --- !u!95 &4252825742984001841
 Animator:
   serializedVersion: 3
