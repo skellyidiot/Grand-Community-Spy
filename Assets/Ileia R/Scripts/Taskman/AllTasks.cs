@@ -7,7 +7,7 @@ public class AllTasks : MonoBehaviour
 {
     //task 1
     public GameObject infosteal;
-    public bool hasInfo;
+    public static bool hasInfo;
 
     //task 2 
     public GameObject leader;

@@ -14,7 +14,7 @@ public class TaskmanTXTbox : MonoBehaviour
     public GameObject RootObjectOfHFactsTextBox;
     public bool isTalking;
 
-    public bool doingTask1;
+    public static bool doingTask1;
     public static bool doingTask2;
     public bool doingTask3;
 
