@@ -7,8 +7,9 @@ public class Car : MonoBehaviour
     public bool isDriving;
 
     public GameObject car;
-
     public GameObject GetOut;
+
+    Rigidbody2D RB;
 
     private float carXS;
     private float carYS;
@@ -32,6 +33,8 @@ public class Car : MonoBehaviour
 
         car = GameObject.FindGameObjectWithTag("car");
 
+        RB = GetComponent<Rigidbody2D>();
+
         carXS = car.transform.localScale.x;
         carYS = car.transform.localScale.y;
         carZS = car.transform.localScale.z;
@@ -51,6 +54,14 @@ public class Car : MonoBehaviour
         if(isDriving == true)
         {
             RootObjectOfHFactsTextBox.SetActive(false);
+            this.GetComponent<PlayerMovement>().enabled = false;
+            this.GetComponent<Shoot>().enabled = false;
+            this.GetComponent<CarController>().enabled = true;
+            this.GetComponent<CarInputHandler>().enabled = true;
+            RB.constraints = RigidbodyConstraints2D.None;
+
+            RB.drag = 5f;
+            RB.angularDrag = 20f;
 
         }
         if(isDriving == true && Input.GetKey(KeyCode.F))
@@ -67,6 +78,17 @@ public class Car : MonoBehaviour
                 isDriving = false;
             }
         }
+        if(isDriving == false)
+        {
+            this.GetComponent<PlayerMovement>().enabled = true;
+            this.GetComponent<Shoot>().enabled = true;
+            this.GetComponent<CarController>().enabled = false;
+            this.GetComponent<CarInputHandler>().enabled = false;
+
+            RB.constraints = RigidbodyConstraints2D.FreezeRotation;
+            RB.drag = 0f;
+            RB.angularDrag = 0.05f;
+        }
     }
     private void OnCollisionStay2D(Collision2D collision)
     {
@@ -82,7 +104,7 @@ public class Car : MonoBehaviour
                 gameObject.transform.position = car.transform.position;
                 gameObject.transform.rotation = Quaternion.Euler(carXR, carYR, carZR);
                 car.transform.SetParent(gameObject.transform);
-                car.transform.localScale = new Vector3(carXS, 4.3F, carZS);
+                car.transform.localScale = new Vector3(carXS, carYS, carZS);
                 WaitForSeconds();
                 isDriving = true;
             }   

@@ -33,11 +33,11 @@ public class CarController : MonoBehaviour
     {
         ApplyEngineForce();
         KillOrthogonalVelocity();
-        ApplySteering();
-    //    if(Mathf.Abs(carRB2.velocity.x) + Mathf.Abs(carRB2.velocity.y) >= 1)
-    //    {
-    //        ApplySteering();
-    //    }
+        
+        if (Mathf.Abs(carRB2.velocity.x) + Mathf.Abs(carRB2.velocity.y) >= 1)
+        {
+            ApplySteering();
+        }
     }
 
     void ApplyEngineForce()

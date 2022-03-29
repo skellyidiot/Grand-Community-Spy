@@ -6,7 +6,7 @@ using UnityEngine.Animations;
 public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed = 5f;
-    public bool HasGunOut = false;
+    public static bool HasGunOut = false;
 
     public Rigidbody2D rb;
     public Camera cam;
