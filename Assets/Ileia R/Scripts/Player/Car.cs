@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class Car : MonoBehaviour
 {
-    public bool isDriving;
+    public static bool isDriving;
 
-    public GameObject car;
+
+    public static GameObject car;
+
+
     public GameObject GetOut;
 
     Rigidbody2D RB;
