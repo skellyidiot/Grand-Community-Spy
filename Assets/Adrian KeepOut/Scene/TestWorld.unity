@@ -121,6 +121,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!50 &27447716 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 477830869458191763, guid: ddde1fd30d8c37b458f9e21a766b0ead,
+    type: 3}
+  m_PrefabInstance: {fileID: 1512745455}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &72070923
 GameObject:
   m_ObjectHideFlags: 0
@@ -162,7 +168,7 @@ GameObject:
   - component: {fileID: 76596675}
   - component: {fileID: 76596674}
   - component: {fileID: 76596676}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: New Sprite (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -285,7 +291,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 283286122}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c9679e68a0f1144e79c664d9a11ca121, type: 3}
   m_Name: 
@@ -299,7 +305,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 283286122}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f6eb1402c17e84a9282a7f0f62eb584f, type: 3}
   m_Name: 
@@ -620,7 +626,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 949928103}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: GameObject (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -688,6 +694,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPC (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1214933636454537259, guid: 4e4eec83d4965cf49818247b1bde0d3a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 1214933636454537260, guid: 4e4eec83d4965cf49818247b1bde0d3a,
         type: 3}
       propertyPath: m_RootOrder
@@ -743,6 +754,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1214933636454537267, guid: 4e4eec83d4965cf49818247b1bde0d3a,
+        type: 3}
+      propertyPath: patrolPts.Array.data[0]
+      value: 
+      objectReference: {fileID: 1787708882}
+    - target: {fileID: 1214933636454537267, guid: 4e4eec83d4965cf49818247b1bde0d3a,
+        type: 3}
+      propertyPath: patrolPts.Array.data[1]
+      value: 
+      objectReference: {fileID: 72070924}
+    - target: {fileID: 1214933636454537267, guid: 4e4eec83d4965cf49818247b1bde0d3a,
+        type: 3}
+      propertyPath: patrolPts.Array.data[2]
+      value: 
+      objectReference: {fileID: 1432000538}
+    - target: {fileID: 1214933636454537267, guid: 4e4eec83d4965cf49818247b1bde0d3a,
+        type: 3}
+      propertyPath: patrolPts.Array.data[3]
+      value: 
+      objectReference: {fileID: 1087394431}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e4eec83d4965cf49818247b1bde0d3a, type: 3}
 --- !u!1 &1141634435
@@ -756,7 +787,7 @@ GameObject:
   - component: {fileID: 1141634437}
   - component: {fileID: 1141634436}
   - component: {fileID: 1141634438}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: New Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -879,7 +910,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1286522001}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &1286522003
 Camera:
   m_ObjectHideFlags: 0
@@ -962,7 +993,7 @@ GameObject:
   - component: {fileID: 1343941250}
   - component: {fileID: 1343941249}
   - component: {fileID: 1343941251}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: New Sprite (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1174,7 +1205,7 @@ GameObject:
   - component: {fileID: 1556829041}
   - component: {fileID: 1556829040}
   - component: {fileID: 1556829042}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: New Sprite (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1283,6 +1314,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPC (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1214933636454537259, guid: 4e4eec83d4965cf49818247b1bde0d3a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 1214933636454537260, guid: 4e4eec83d4965cf49818247b1bde0d3a,
         type: 3}
       propertyPath: m_RootOrder
@@ -1338,6 +1374,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1214933636454537267, guid: 4e4eec83d4965cf49818247b1bde0d3a,
+        type: 3}
+      propertyPath: patrolPts.Array.data[0]
+      value: 
+      objectReference: {fileID: 1787708882}
+    - target: {fileID: 1214933636454537267, guid: 4e4eec83d4965cf49818247b1bde0d3a,
+        type: 3}
+      propertyPath: patrolPts.Array.data[1]
+      value: 
+      objectReference: {fileID: 72070924}
+    - target: {fileID: 1214933636454537267, guid: 4e4eec83d4965cf49818247b1bde0d3a,
+        type: 3}
+      propertyPath: patrolPts.Array.data[2]
+      value: 
+      objectReference: {fileID: 1432000538}
+    - target: {fileID: 1214933636454537267, guid: 4e4eec83d4965cf49818247b1bde0d3a,
+        type: 3}
+      propertyPath: patrolPts.Array.data[3]
+      value: 
+      objectReference: {fileID: 1087394431}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e4eec83d4965cf49818247b1bde0d3a, type: 3}
 --- !u!1 &1563264224
@@ -1371,7 +1427,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lm:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 4294967295
+  speedX: []
+  speedy: []
+  Vx: []
+  Vy: []
+  playerSpeed: {fileID: 27447716}
+  script: {fileID: 283286122}
+  name: {fileID: 0}
+  oldX: 0
+  oldY: 0
+  vX: 0
+  vY: 0
+  NPCspeed: []
 --- !u!4 &1563264226
 Transform:
   m_ObjectHideFlags: 0
@@ -1397,6 +1465,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: NPC
+      objectReference: {fileID: 0}
+    - target: {fileID: 1214933636454537259, guid: 4e4eec83d4965cf49818247b1bde0d3a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1214933636454537260, guid: 4e4eec83d4965cf49818247b1bde0d3a,
         type: 3}
@@ -1456,10 +1529,36 @@ PrefabInstance:
     - target: {fileID: 1214933636454537267, guid: 4e4eec83d4965cf49818247b1bde0d3a,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1214933636454537267, guid: 4e4eec83d4965cf49818247b1bde0d3a,
+        type: 3}
+      propertyPath: patrolPts.Array.data[0]
+      value: 
+      objectReference: {fileID: 1787708882}
+    - target: {fileID: 1214933636454537267, guid: 4e4eec83d4965cf49818247b1bde0d3a,
+        type: 3}
+      propertyPath: patrolPts.Array.data[1]
+      value: 
+      objectReference: {fileID: 72070924}
+    - target: {fileID: 1214933636454537267, guid: 4e4eec83d4965cf49818247b1bde0d3a,
+        type: 3}
+      propertyPath: patrolPts.Array.data[2]
+      value: 
+      objectReference: {fileID: 1432000538}
+    - target: {fileID: 1214933636454537267, guid: 4e4eec83d4965cf49818247b1bde0d3a,
+        type: 3}
+      propertyPath: patrolPts.Array.data[3]
+      value: 
+      objectReference: {fileID: 1087394431}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e4eec83d4965cf49818247b1bde0d3a, type: 3}
+--- !u!4 &1787708882 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5887788096814668595, guid: ed41bbeb9249c8b408b40b99abdde45b,
+    type: 3}
+  m_PrefabInstance: {fileID: 5887788096531859287}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1899030244
 GameObject:
   m_ObjectHideFlags: 0
@@ -1471,7 +1570,7 @@ GameObject:
   - component: {fileID: 1899030246}
   - component: {fileID: 1899030245}
   - component: {fileID: 1899030247}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: New Sprite (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
