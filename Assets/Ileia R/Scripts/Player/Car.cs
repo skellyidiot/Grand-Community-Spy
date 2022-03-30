@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Cinemachine;
 
 public class Car : MonoBehaviour
 {
@@ -9,7 +10,9 @@ public class Car : MonoBehaviour
 
 
     public static GameObject car;
-
+    SpriteRenderer sr;
+    public CinemachineVirtualCamera cm;
+    
 
     public GameObject GetOut;
 
@@ -36,6 +39,7 @@ public class Car : MonoBehaviour
         RootObjectOfHFactsTextBox.SetActive(false);
 
         car = GameObject.FindGameObjectWithTag("car");
+        sr = GetComponent<SpriteRenderer>();
 
         RB = GetComponent<Rigidbody2D>();
 
@@ -64,6 +68,9 @@ public class Car : MonoBehaviour
             this.GetComponent<CarInputHandler>().enabled = true;
             RB.constraints = RigidbodyConstraints2D.None;
 
+            sr.enabled = false;
+            cm.m_Lens.OrthographicSize = 12;
+
             RB.drag = 5f;
             RB.angularDrag = 20f;
 
@@ -88,6 +95,9 @@ public class Car : MonoBehaviour
             this.GetComponent<Shoot>().enabled = true;
             this.GetComponent<CarController>().enabled = false;
             this.GetComponent<CarInputHandler>().enabled = false;
+
+            sr.enabled = true;
+            cm.m_Lens.OrthographicSize = 7;
 
             RB.constraints = RigidbodyConstraints2D.FreezeRotation;
             RB.drag = 0f;

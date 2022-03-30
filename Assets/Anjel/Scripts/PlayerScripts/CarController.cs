@@ -59,6 +59,13 @@ public class CarController : MonoBehaviour
 
         carRB2.AddForce(engineForceVector, ForceMode2D.Force);
     }
+    void KillOrthogonalVelocity()
+    {
+        Vector2 forwardVelocity = transform.up * Vector2.Dot(carRB2.velocity, transform.up);
+        Vector2 rightVelocity = transform.right * Vector2.Dot(carRB2.velocity, transform.right);
+
+        carRB2.velocity = forwardVelocity + rightVelocity * driftFactor;
+    }
 
     void ApplySteering()
     {
@@ -70,15 +77,15 @@ public class CarController : MonoBehaviour
         rotationAngle -= steeringInput * turnFactor;
 
         carRB2.MoveRotation(rotationAngle);
+
+        //if (accelerationInput <= 0)
+        //{
+        //    carRB2.MoveRotation(-rotationAngle);
+        //}
+        //else carRB2.MoveRotation(rotationAngle);
+
     }
     
-    void KillOrthogonalVelocity()
-    {
-        Vector2 forwardVelocity = transform.up * Vector2.Dot(carRB2.velocity, transform.up);
-        Vector2 rightVelocity = transform.right * Vector2.Dot(carRB2.velocity, transform.right);
-
-        carRB2.velocity = forwardVelocity + rightVelocity * driftFactor;
-    }
 
     public void SetInputVector(Vector2 inputVector)
     {
