@@ -16,7 +16,7 @@ public class TaskmanTXTbox : MonoBehaviour
 
     public static bool doingTask1;
     public static bool doingTask2;
-    public bool doingTask3;
+    public static bool doingTask3;
 
     public static bool doneTask1;
     public static bool doneTask2;
@@ -31,7 +31,7 @@ public class TaskmanTXTbox : MonoBehaviour
     {
         RootObjectOfHFactsTextBox.SetActive(false);
 
-        txt.GetComponentInChildren<UnityEngine.UI.Text>().text = "Hey, I am task man, which task do you want to do? \n 1.) Go steal some information about the enemy \n 2.) Drive leader to his destination \n 3.) idk";
+        txt.GetComponentInChildren<UnityEngine.UI.Text>().text = "Hey, I am task man, which task do you want to do? \n 1.) Go infiltrate the leaders house and steal money from the safe \n 2.) Drive leader to his destination \n 3.) Go from ___ to ___ in 60 seconds";
     }
 
     void Update()
@@ -70,15 +70,15 @@ public class TaskmanTXTbox : MonoBehaviour
 
         if (doneTask1 == true && doneTask2 == false && doneTask3 == false && doingTask2 == false && doingTask3 == false)
         {
-            txt.text = "good job doing task 1, now pick one of these tasks \n 2.) Drive leader to his destination \n 3.) idk";
+            txt.text = "good job doing task 1, now pick one of these tasks \n 2.) Drive leader to his destination \n 3.) Go from ___ to ___ in 60 seconds";
         }
         if (doneTask1 == true && doneTask2 == true && doneTask3 == false && doingTask3 == false)
         {
-            txt.text = "good job doing task 1 and two, you can only do this task: \n 3.) idk";
+            txt.text = "good job doing task 1 and two, you can only do this task: \n 3.) Go from ___ to ___ in 60 seconds";
         }
         if (doneTask1 == false && doneTask2 == true && doneTask3 == false && doingTask3 == false && doingTask1 == false)
         {
-            txt.text = "good job doing task 2, you can only do this task: \n 1.) Go steal some information about the enemy  \n 3.) idk";
+            txt.text = "good job doing task 2, you can only do this task: \n 1.) Go infiltrate the leaders house and steal money from the safe   \n 3.) Go from ___ to ___ in 60 seconds";
         }
         if (doneTask1 == true && doneTask3 == true && doneTask2 != true && doingTask2 != true)
         {
@@ -86,11 +86,11 @@ public class TaskmanTXTbox : MonoBehaviour
         }
         if(doneTask2 == true && doneTask3 == true && doneTask1 != true && doingTask1 != true)
         {
-            txt.text = "Good job doing task 2 and task 3, now do this task: \n 1.) Go steal some information about the enemy ";
+            txt.text = "Good job doing task 2 and task 3, now do this task: \n 1.) Go infiltrate the leaders house and steal money from the safe  ";
         }
         if (doneTask2 != true && doneTask3 == true && doneTask1 != true && doingTask1 != true && doingTask2 != true)
         {
-            txt.text = "Good job doing task 3, now do this task: \n 1.) Go steal some information about the enemy  \n 2.) Drive leader to his destination)";
+            txt.text = "Good job doing task 3, now do this task: \n 1.) Go infiltrate the leaders house and steal money from the safe  \n 2.) Drive leader to his destination)";
         }
         if(doneTask1 == true && doneTask2 == true && doneTask3 == true)
         {
