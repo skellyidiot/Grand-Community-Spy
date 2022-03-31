@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
 {
 
     public float moveSpeed = 5f;
+    public float stamina = 10;
     public static bool HasGunOut = false;
 
     public Rigidbody2D rb;
@@ -29,12 +30,29 @@ public class PlayerMovement : MonoBehaviour
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
+        if(Input.GetKeyDown(KeyCode.LeftShift) && stamina > 1)
+        {
+            moveSpeed *= 2;
+            ani.speed *= 2;
+            stamina -= 0.05f;
+
+        } else if (Input.GetKey(KeyCode.LeftShift) != true && stamina <= 10)
+        {
+            stamina += 0.1f;
+        }
+        if (Input.GetKeyUp(KeyCode.LeftShift) || stamina <= 0.01f)
+        {
+            moveSpeed *= 0.5f;
+            ani.speed *= 0.5f;
+        } 
+
         mousePos = Input.mousePosition;
         mousePos -= new Vector2(Screen.width / 2, Screen.height / 2);
-        print(mousePos.normalized);
+        //print(mousePos.normalized);
 
         ani.SetFloat("Horizontal", movement.x);
         ani.SetFloat("Vertical", movement.y);
+
         //if (transform.rotation.z > -45 && transform.rotation.z < 45)
         //{
         //    ani.SetBool("MovingUp", true);

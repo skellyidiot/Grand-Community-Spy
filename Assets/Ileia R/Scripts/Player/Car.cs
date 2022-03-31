@@ -30,6 +30,8 @@ public class Car : MonoBehaviour
     private float carY;
     private float carZ;
 
+    private Quaternion carRotation;
+
     public GameObject RootObjectOfHFactsTextBox;
 
     // Start is called before the first frame update
@@ -54,6 +56,7 @@ public class Car : MonoBehaviour
         carX = car.transform.position.x;
         carY = car.transform.position.y;
         carZ = car.transform.position.z;
+        carRotation = car.transform.rotation;
     }
 
     // Update is called once per frame
@@ -86,6 +89,13 @@ public class Car : MonoBehaviour
                 GetOut.transform.position = new Vector3(carX, carY, carZ);
                 gameObject.transform.position = GetOut.transform.position;
                 car.transform.parent = null;
+                carXR = transform.rotation.x;
+                carYR = transform.rotation.y;
+                carZR = transform.rotation.z * Mathf.Rad2Deg;
+                Debug.Log("=================ROTATION:    " + car.transform.rotation.z);
+                Debug.Log("=================EULER:    " + car.transform.localEulerAngles.z);
+                Debug.Log("================================CAR ZR:   " + carZR);
+
                 isDriving = false;
             }
         }
@@ -113,14 +123,16 @@ public class Car : MonoBehaviour
         if (Input.GetKey(KeyCode.E))
         {
             Debug.Log("Car");
+
             if (collision.gameObject.tag == "car" && isDriving == false)
             {
-                gameObject.transform.position = car.transform.position;
-                gameObject.transform.rotation = Quaternion.Euler(carXR, carYR, carZR);
-                car.transform.SetParent(gameObject.transform);
-                car.transform.localScale = new Vector3(carXS, carYS, carZS);
-                WaitForSeconds();
-                isDriving = true;
+                //carXR = transform.rotation.x;
+                //carYR = transform.rotation.y;
+                //carZR = transform.rotation.z;
+
+                //car.transform.rotation = Quaternion.Euler(new Vector3(carXR, carYR, carZR));
+
+                EnterCar();
             }   
         }
     }
@@ -129,8 +141,26 @@ public class Car : MonoBehaviour
         RootObjectOfHFactsTextBox.SetActive(false);
     }
 
+    private void EnterCar()
+    {
+        gameObject.transform.position = car.transform.position;
+        gameObject.transform.rotation = Quaternion.Euler(carXR, carYR, carZR);
+        car.transform.SetParent(gameObject.transform);
+        car.transform.rotation = Quaternion.Euler(new Vector3(carXR, carYR, carZR));
+        //car.transform.rotation = carRotation;
+        car.transform.localScale = new Vector3(carXS, carYS, carZS);
+        WaitForSeconds();
+        //Invoke("PauseForABit",0.06f);
+        isDriving = true;
+    }
+
     IEnumerable WaitForSeconds()
     {
-        yield return new WaitForSeconds(.5F);
+        yield return new WaitForSeconds(.06F);
+    }
+
+    private void PauseForABit()
+    {
+        //isDriving = true;
     }
 }
