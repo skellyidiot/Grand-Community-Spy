@@ -5,6 +5,7 @@ using UnityEngine.Animations;
 
 public class PlayerMovement : MonoBehaviour
 {
+
     public float moveSpeed = 5f;
     public float stamina = 10;
     public static bool HasGunOut = false;
