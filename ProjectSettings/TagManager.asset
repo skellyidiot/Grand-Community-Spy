@@ -12,6 +12,8 @@ TagManager:
   - DropOff
   - DoorIn
   - DoorOut
+  - failSpawn
+  - Point B
   layers:
   - Default
   - TransparentFX

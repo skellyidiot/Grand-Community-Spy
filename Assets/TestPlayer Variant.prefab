@@ -164,7 +164,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4441827827095735421}
-  m_LocalRotation: {x: 0, y: 0, z: -0.74036944, w: -0.67220026}
+  m_LocalRotation: {x: 0, y: 0, z: 0.74037063, w: 0.67219883}
   m_LocalPosition: {x: 21.39, y: 10.464364, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -172,7 +172,7 @@ Transform:
   - {fileID: 4441827826415103440}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 95.526}
 --- !u!212 &4441827827095735411
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -242,6 +242,8 @@ MonoBehaviour:
   dropOff: {fileID: 0}
   taskmanScript: {fileID: 0}
   carScript: {fileID: 0}
+  pointB: {fileID: 0}
+  spawnerIfFail: {fileID: 0}
 --- !u!114 &8495108820560607468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -254,6 +256,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1632b654c55dc714ca1259cb6c978877, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  smoke: {fileID: 0}
+  t: {fileID: 0}
+  vR: {x: 0, y: 0, z: 0}
+  cm: {fileID: 0}
   GetOut: {fileID: 0}
   RootObjectOfHFactsTextBox: {fileID: 0}
 --- !u!114 &4441827827095735422
@@ -269,7 +275,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  HasGunOut: 0
+  stamina: 10
   rb: {fileID: 4441827827095735420}
   cam: {fileID: 0}
 --- !u!114 &4441827827095735423

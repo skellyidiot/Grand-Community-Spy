@@ -8,6 +8,7 @@ public class Car : MonoBehaviour
 {
     public static bool isDriving;
 
+    public GameObject smoke;
 
     public static GameObject car;
     public Transform t;
@@ -54,6 +55,8 @@ public class Car : MonoBehaviour
         carZ = car.transform.position.z;
 
         carRotation = car.transform.rotation;
+
+        smoke.SetActive(false);
     }
 
     // Update is called once per frame
@@ -117,6 +120,11 @@ public class Car : MonoBehaviour
             RB.constraints = RigidbodyConstraints2D.FreezeRotation;
             RB.drag = 0f;
             RB.angularDrag = 0.05f;
+            smoke.SetActive(false);
+        }
+        if(isDriving == true)
+        {
+            smoke.SetActive(true);
         }
     }
     private void OnCollisionStay2D(Collision2D collision)
@@ -160,7 +168,7 @@ public class Car : MonoBehaviour
         //car.transform.rotation = carRotation;
         WaitForSeconds();
         //Invoke("PauseForABit",0.06f);
-
+        smoke.SetActive(true);
         isDriving = true;
     }
 
