@@ -10,17 +10,15 @@ public class Car : MonoBehaviour
 
 
     public static GameObject car;
+    public Transform t;
+    public Vector3 vR;
+
     SpriteRenderer sr;
     public CinemachineVirtualCamera cm;
     
-
     public GameObject GetOut;
 
     Rigidbody2D RB;
-
-    private float carXS;
-    private float carYS;
-    private float carZS;
 
     private float carXR;
     private float carYR;
@@ -42,13 +40,11 @@ public class Car : MonoBehaviour
 
         car = GameObject.FindGameObjectWithTag("car");
         sr = GetComponent<SpriteRenderer>();
-
         RB = GetComponent<Rigidbody2D>();
 
-        carXS = car.transform.localScale.x;
-        carYS = car.transform.localScale.y;
-        carZS = car.transform.localScale.z;
-
+        t = car.transform;
+        vR = car.transform.eulerAngles;
+        
         carXR = car.transform.rotation.x;
         carYR = car.transform.rotation.y;
         carZR = car.transform.rotation.z;
@@ -56,6 +52,7 @@ public class Car : MonoBehaviour
         carX = car.transform.position.x;
         carY = car.transform.position.y;
         carZ = car.transform.position.z;
+
         carRotation = car.transform.rotation;
     }
 
@@ -76,6 +73,9 @@ public class Car : MonoBehaviour
 
             RB.drag = 5f;
             RB.angularDrag = 20f;
+            
+            t = car.transform;
+            vR = car.transform.eulerAngles;
 
         }
         if(isDriving == true && Input.GetKey(KeyCode.F))
@@ -89,12 +89,17 @@ public class Car : MonoBehaviour
                 GetOut.transform.position = new Vector3(carX, carY, carZ);
                 gameObject.transform.position = GetOut.transform.position;
                 car.transform.parent = null;
-                carXR = transform.rotation.x;
-                carYR = transform.rotation.y;
-                carZR = transform.rotation.z * Mathf.Rad2Deg;
-                Debug.Log("=================ROTATION:    " + car.transform.rotation.z);
-                Debug.Log("=================EULER:    " + car.transform.localEulerAngles.z);
-                Debug.Log("================================CAR ZR:   " + carZR);
+
+                t = car.transform;
+                vR = car.transform.eulerAngles;
+
+                //carXR = transform.rotation.x;
+                //carYR = transform.rotation.y;
+                //carZR = transform.rotation.z * Mathf.Rad2Deg;
+
+                //Debug.Log("=================ROTATION:    " + car.transform.rotation.z);
+                //Debug.Log("=================EULER:    " + car.transform.localEulerAngles.z);
+                //Debug.Log("================================CAR ZR:   " + carZR);
 
                 isDriving = false;
             }
@@ -126,6 +131,9 @@ public class Car : MonoBehaviour
 
             if (collision.gameObject.tag == "car" && isDriving == false)
             {
+                car.transform.eulerAngles = vR;
+                transform.eulerAngles = vR;
+
                 //carXR = transform.rotation.x;
                 //carYR = transform.rotation.y;
                 //carZR = transform.rotation.z;
@@ -147,10 +155,12 @@ public class Car : MonoBehaviour
         gameObject.transform.rotation = Quaternion.Euler(carXR, carYR, carZR);
         car.transform.SetParent(gameObject.transform);
         car.transform.rotation = Quaternion.Euler(new Vector3(carXR, carYR, carZR));
+        transform.eulerAngles = vR;
+
         //car.transform.rotation = carRotation;
-        car.transform.localScale = new Vector3(carXS, carYS, carZS);
         WaitForSeconds();
         //Invoke("PauseForABit",0.06f);
+
         isDriving = true;
     }
 
