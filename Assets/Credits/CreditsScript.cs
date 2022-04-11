@@ -42,7 +42,7 @@ public class CreditsScript : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            SceneManager.LoadScene("MainMenu");
+            SceneManager.LoadScene("Menu");
         }
     }
 }
