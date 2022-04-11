@@ -5,10 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Anjel/Scenes/supertemptitle.unity
     guid: 2297d67511ed2784ea8bf0f94b8d0cd8
   - enabled: 1
     path: Assets/Ileia R/TestScenes/Two.unity
     guid: 070acb98e1e29364eb8151f209abac24
+  - enabled: 1
+    path: Assets/Anjel/Scenes/basic.unity
+    guid: ae1dd35640896374aaaf6404126f8cf8
   m_configObjects: {}
