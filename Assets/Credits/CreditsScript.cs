@@ -19,18 +19,19 @@ public class CreditsScript : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.C))
         {
-            
-            
+
+            Slides[CurrSlide].SetActive(false);
             if (CurrSlide >= Length)
             {
                 CurrSlide = 0;
             }
             else
             {
-                Slides[CurrSlide].SetActive(false);
+                
                 CurrSlide += 1;
-                Slides[CurrSlide].SetActive(true);
+                
             }
+            Slides[CurrSlide].SetActive(true);
         }
         if (Input.GetKeyDown(KeyCode.X))
         {

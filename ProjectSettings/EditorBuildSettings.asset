@@ -5,9 +5,6 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/supertemptitle.unity
-    guid: 2297d67511ed2784ea8bf0f94b8d0cd8
   - enabled: 1
     path: Assets/Ileia R/TestScenes/Two.unity
     guid: 070acb98e1e29364eb8151f209abac24
@@ -15,6 +12,6 @@ EditorBuildSettings:
     path: Assets/Anjel/Scenes/basic.unity
     guid: ae1dd35640896374aaaf6404126f8cf8
   - enabled: 1
-    path: Assets/MainMenu.unity
-    guid: aba7e56f5d732d84aba52ff3fcc87e2b
+    path: Assets/Credits/Credits.unity
+    guid: b52deaa8130ff584cb579ea03dcf9c8d
   m_configObjects: {}
