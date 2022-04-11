@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Animations;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -44,7 +45,9 @@ public class PlayerMovement : MonoBehaviour
         {
             moveSpeed *= 0.5f;
             ani.speed *= 0.5f;
-        } 
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape)) SceneManager.LoadScene("Menu");
 
         mousePos = Input.mousePosition;
         mousePos -= new Vector2(Screen.width / 2, Screen.height / 2);
