@@ -18,7 +18,7 @@ public class StealTask : MonoBehaviour
     void Start()
     {
         arrowPointAt = GameObject.FindGameObjectWithTag("DoorIn");
-        arrow.SetActive(false);
+       
 
         isInBuilding = false;
 
@@ -28,13 +28,7 @@ public class StealTask : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(TaskmanTXTbox.doingTask1 == true)
-        {
-            arrow.SetActive(true);
-
-            Vector2 current = transform.position;
-            
-        }
+        
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {

@@ -5,13 +5,14 @@ using UnityEngine.UI;
 
 public class AllTasks : MonoBehaviour
 {
+    public GameObject arrow;
     //task 1
     public GameObject infosteal;
     public static bool hasInfo;
 
     //task 2 
     public GameObject leader;
-    public bool LeaderInCar;
+    public static bool LeaderInCar;
     public GameObject dropOff;
     //taskman script
     public TaskmanTXTbox taskmanScript;
@@ -27,6 +28,9 @@ public class AllTasks : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        arrow = GameObject.FindGameObjectWithTag("arrow");
+        arrow.SetActive(false);
+
         // task 1
         infosteal = GameObject.FindGameObjectWithTag("info");
 
@@ -44,7 +48,14 @@ public class AllTasks : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (TaskmanTXTbox.doingTask1 == true || TaskmanTXTbox.doingTask3 == true || TaskmanTXTbox.doingTask2 == true)
+        {
+            arrow.SetActive(true);
+        }
+        if (TaskmanTXTbox.doingTask1 == false && TaskmanTXTbox.doingTask3 == false && TaskmanTXTbox.doingTask2 == false)
+        {
+            arrow.SetActive(false);
+        }
         //task 3
         if (TaskmanTXTbox.doingTask3 == true)
         {
