@@ -78,12 +78,6 @@ public class CarController : MonoBehaviour
 
         carRB2.MoveRotation(rotationAngle);
 
-        //if (accelerationInput <= 0)
-        //{
-        //    carRB2.MoveRotation(-rotationAngle);
-        //}
-        //else carRB2.MoveRotation(rotationAngle);
-
     }
     
 
