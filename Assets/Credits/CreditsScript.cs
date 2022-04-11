@@ -23,7 +23,7 @@ public class CreditsScript : MonoBehaviour
             
             if (CurrSlide >= Length)
             {
-                //end
+                CurrSlide = 0
             }
             else
             {
