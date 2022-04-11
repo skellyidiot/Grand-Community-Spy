@@ -11,9 +11,15 @@ public class StealTask : MonoBehaviour
 
     public bool hasAlreadyGoneIn;
 
+    public GameObject arrow;
+    public GameObject arrowPointAt;
+
     // Start is called before the first frame update
     void Start()
     {
+        arrowPointAt = GameObject.FindGameObjectWithTag("DoorIn");
+        arrow.SetActive(false);
+
         isInBuilding = false;
 
         hasAlreadyGoneIn = false;
@@ -22,7 +28,13 @@ public class StealTask : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(TaskmanTXTbox.doingTask1 == true)
+        {
+            arrow.SetActive(true);
+
+            Vector2 current = transform.position;
+            
+        }
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -40,4 +52,5 @@ public class StealTask : MonoBehaviour
             gameObject.transform.position = SpawnNOTINBUILDING.transform.position;
         }
     }
+    
 }
