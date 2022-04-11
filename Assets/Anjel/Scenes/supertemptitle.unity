@@ -408,7 +408,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce8b659a2d6024b42acbc97fc678d7f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toScene: 
+  toScene: mostbasicofbasicleveldesign
 --- !u!1 &1177688889
 GameObject:
   m_ObjectHideFlags: 0
@@ -654,7 +654,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce8b659a2d6024b42acbc97fc678d7f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toScene: 
+  toScene: Credits
 --- !u!1 &1316813112
 GameObject:
   m_ObjectHideFlags: 0
@@ -1029,7 +1029,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: HOODlum
+  m_Text: HOOD-lum
 --- !u!222 &1990527179
 CanvasRenderer:
   m_ObjectHideFlags: 0

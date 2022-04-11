@@ -53,14 +53,6 @@ public class PlayerMovement : MonoBehaviour
         ani.SetFloat("Horizontal", movement.x);
         ani.SetFloat("Vertical", movement.y);
 
-        //if (transform.rotation.z > -45 && transform.rotation.z < 45)
-        //{
-        //    ani.SetBool("MovingUp", true);
-        //} else
-        //{
-        //    ani.SetBool("MovingUp", false);
-        //}
-
         if (movement != new Vector2())
         {
             ani.SetBool("Moving", true);
@@ -80,20 +72,6 @@ public class PlayerMovement : MonoBehaviour
             ani.SetBool("HasGunOut", false);
             HasGunOut = false;
         }
-
-        //Vector2 rmos = new Vector2(Mathf.Round(mousePos.normalized.x), Mathf.Round(mousePos.normalized.y));
-        //Vector2 rmov = new Vector2(Mathf.Round(movement.normalized.x), Mathf.Round(movement.normalized.y));
-        //float ang = Mathf.Abs(Mathf.Atan2(rmov.y, rmov.x) * Mathf.Rad2Deg - 90f) - Mathf.Abs(Mathf.Atan2(rmos.y, rmos.x) * Mathf.Rad2Deg - 90f);
-        //print(ang);
-
-        //if (rmos == rmov)
-        //{
-        //    ani.SetBool("MovingUp", true);
-        //}
-        //else
-        //{
-        //    ani.SetBool("MovingUp", false);
-        //}
     }
 
     void FixedUpdate()
