@@ -6,10 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Anjel/Scenes/supertemptitle.unity
+    path: Assets/supertemptitle.unity
     guid: 2297d67511ed2784ea8bf0f94b8d0cd8
   - enabled: 1
-    path: Assets/Anjel/Scenes/mostbasicofbasicleveldesign.unity
+    path: Assets/Anjel/Scenes/basic.unity
     guid: ae1dd35640896374aaaf6404126f8cf8
   - enabled: 1
     path: Assets/Ileia R/TestScenes/Two.unity

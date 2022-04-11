@@ -408,7 +408,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce8b659a2d6024b42acbc97fc678d7f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toScene: mostbasicofbasicleveldesign
+  toScene: basic
 --- !u!1 &1177688889
 GameObject:
   m_ObjectHideFlags: 0

@@ -16,6 +16,7 @@ public class Car : MonoBehaviour
 
     SpriteRenderer sr;
     public CinemachineVirtualCamera cm;
+    public CinemachineVirtualCamera cm2;
     
     public GameObject GetOut;
 
@@ -72,7 +73,8 @@ public class Car : MonoBehaviour
             RB.constraints = RigidbodyConstraints2D.None;
 
             sr.enabled = false;
-            cm.m_Lens.OrthographicSize = 12;
+            cm.m_Priority = 5;
+            cm2.m_Priority = 10;
 
             RB.drag = 5f;
             RB.angularDrag = 20f;
@@ -115,7 +117,8 @@ public class Car : MonoBehaviour
             this.GetComponent<CarInputHandler>().enabled = false;
 
             sr.enabled = true;
-            cm.m_Lens.OrthographicSize = 7;
+            cm.m_Priority = 10;
+            cm2.m_Priority = 5;
 
             RB.constraints = RigidbodyConstraints2D.FreezeRotation;
             RB.drag = 0f;
