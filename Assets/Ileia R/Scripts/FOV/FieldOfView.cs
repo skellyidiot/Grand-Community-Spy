@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FieldOfView : MonoBehaviour
+public class FieldOfView1 : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -11,9 +11,9 @@ public class FieldOfView : MonoBehaviour
         GetComponent<MeshFilter>().mesh = mesh;
 
         Vector3 origin = Vector3.zero;
-        float fov = 90f;
+        float fov = 0f;
         int rayCount = 50;
-        float angle = 0f;
+        float angle = 90f;
         float angleIncrease = fov / rayCount;
         float viewDistance = 50f;
 

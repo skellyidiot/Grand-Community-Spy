@@ -12,7 +12,7 @@ public class BoxCast : MonoBehaviour
 
     public float[] Vx;
     public float[] Vy;
-
+    public Move movement;
     public Rigidbody2D playerSpeed;
     public GameObject script;
     public GameObject mainPlayer;
@@ -31,6 +31,7 @@ public class BoxCast : MonoBehaviour
         speedy = new float[10];
         Vy = new float[10];
         NPCspeed = new Vector2[10];
+        movement.GetComponent<Move>();
 }
 
     void Update()
@@ -103,7 +104,7 @@ public class BoxCast : MonoBehaviour
 
         if(sum.y >= 0)
         {
-            if ( (Mathf.Abs(vY) < Mathf.Abs(sum.y) - 0.5 && Mathf.Abs(vX) < Mathf.Abs(sum.x) - 0.5))
+            if ( (Mathf.Abs(movement.movement.y * 2) < Mathf.Abs(sum.y) - 0.5 && Mathf.Abs(movement.movement.x * 2) < Mathf.Abs(sum.x) - 0.5))
             {
 
                 script.GetComponent<Pathfinding.AIDestinationSetter>().enabled = true;
