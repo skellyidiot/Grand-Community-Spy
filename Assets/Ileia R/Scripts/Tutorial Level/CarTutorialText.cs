@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CarTutorialText : MonoBehaviour
 {
-    public bool isInCar;
+    public static bool isInCar;
+    public GameObject car;
     public GameObject thing;
-
     private void Start()
     {
         isInCar = false;
@@ -15,6 +16,9 @@ public class CarTutorialText : MonoBehaviour
     {
         isInCar = Car.isDriving;
 
-        if (isInCar) Destroy(thing);
+        if (isInCar)
+        {
+            Destroy(thing);
+        }
     }
 }
