@@ -34,6 +34,7 @@ public class Car : MonoBehaviour
 
     public GameObject RootObjectOfHFactsTextBox;
 
+    public static bool hasbeenincar;
     // Start is called before the first frame update
     void Start()
     {
@@ -65,6 +66,8 @@ public class Car : MonoBehaviour
     {
         if(isDriving == true)
         {
+            hasbeenincar = true;
+
             RootObjectOfHFactsTextBox.SetActive(false);
             this.GetComponent<PlayerMovement>().enabled = false;
             this.GetComponent<Shoot>().enabled = false;
