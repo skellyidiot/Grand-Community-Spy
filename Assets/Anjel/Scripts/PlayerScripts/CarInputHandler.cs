@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CarInputHandler : MonoBehaviour
 {
@@ -21,5 +22,7 @@ public class CarInputHandler : MonoBehaviour
         inputVector.y = Input.GetAxis("Vertical");
 
         carController.SetInputVector(inputVector);
+
+        if (Input.GetKeyDown(KeyCode.Escape)) SceneManager.LoadScene("Menu");
     }
 }
