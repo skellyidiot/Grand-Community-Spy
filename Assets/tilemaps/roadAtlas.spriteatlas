@@ -43,6 +43,7 @@ SpriteAtlas:
     variantMultiplier: 1
     packables:
     - {fileID: 2800000, guid: 5bae6a24c264bb747907deb71d1d56b5, type: 3}
+    - {fileID: 2800000, guid: 01ed2129971668f4f804301f4e6ef81e, type: 3}
     bindAsDefault: 1
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
@@ -80,6 +81,15 @@ SpriteAtlas:
   - {fileID: -4530216657470773902, guid: 5bae6a24c264bb747907deb71d1d56b5, type: 3}
   - {fileID: -6253479298653041116, guid: 5bae6a24c264bb747907deb71d1d56b5, type: 3}
   - {fileID: 7827082726948793129, guid: 5bae6a24c264bb747907deb71d1d56b5, type: 3}
+  - {fileID: -5126437154465305263, guid: 01ed2129971668f4f804301f4e6ef81e, type: 3}
+  - {fileID: -5058709117750342733, guid: 01ed2129971668f4f804301f4e6ef81e, type: 3}
+  - {fileID: -7588332240585032997, guid: 01ed2129971668f4f804301f4e6ef81e, type: 3}
+  - {fileID: 550638327313383161, guid: 01ed2129971668f4f804301f4e6ef81e, type: 3}
+  - {fileID: -657417709964224853, guid: 01ed2129971668f4f804301f4e6ef81e, type: 3}
+  - {fileID: 4863548159526747418, guid: 01ed2129971668f4f804301f4e6ef81e, type: 3}
+  - {fileID: -5490046188185246721, guid: 01ed2129971668f4f804301f4e6ef81e, type: 3}
+  - {fileID: 5240472900010195486, guid: 01ed2129971668f4f804301f4e6ef81e, type: 3}
+  - {fileID: -6104652902827362772, guid: 01ed2129971668f4f804301f4e6ef81e, type: 3}
   m_PackedSpriteNamesToIndex:
   - road_17
   - road_16
@@ -115,5 +125,14 @@ SpriteAtlas:
   - road_1
   - road_2
   - road_3
+  - roofs_1
+  - roofs_0
+  - roofs_3
+  - roofs_2
+  - roofs_5
+  - roofs_4
+  - roofs_7
+  - roofs_6
+  - roofs_8
   m_Tag: roadAtlas
   m_IsVariant: 0
