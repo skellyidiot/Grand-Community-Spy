@@ -89,7 +89,11 @@ SpriteAtlas:
   - {fileID: 4863548159526747418, guid: 01ed2129971668f4f804301f4e6ef81e, type: 3}
   - {fileID: -5490046188185246721, guid: 01ed2129971668f4f804301f4e6ef81e, type: 3}
   - {fileID: 5240472900010195486, guid: 01ed2129971668f4f804301f4e6ef81e, type: 3}
+  - {fileID: -7722048441413464491, guid: 01ed2129971668f4f804301f4e6ef81e, type: 3}
   - {fileID: -6104652902827362772, guid: 01ed2129971668f4f804301f4e6ef81e, type: 3}
+  - {fileID: 7950247434647337095, guid: 01ed2129971668f4f804301f4e6ef81e, type: 3}
+  - {fileID: 2655571859952922124, guid: 01ed2129971668f4f804301f4e6ef81e, type: 3}
+  - {fileID: 8701689710468449797, guid: 01ed2129971668f4f804301f4e6ef81e, type: 3}
   m_PackedSpriteNamesToIndex:
   - road_17
   - road_16
@@ -133,6 +137,10 @@ SpriteAtlas:
   - roofs_4
   - roofs_7
   - roofs_6
+  - roofs_9
   - roofs_8
+  - roofs_10
+  - roofs_11
+  - roofs_12
   m_Tag: roadAtlas
   m_IsVariant: 0
