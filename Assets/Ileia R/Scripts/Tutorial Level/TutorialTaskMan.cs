@@ -18,7 +18,7 @@ public class TutorialTaskMan : MonoBehaviour
      {
             RootObjectOfHFactsTextBox.SetActive(false);
 
-            txt.GetComponentInChildren<UnityEngine.UI.Text>().text = "I am Jose, I will give you tasks, and you do them, are you ready to help the community now? \n Press the corresponding key to answer: \n 1.) Yes \n 2.) No";
+            txt.GetComponentInChildren<UnityEngine.UI.Text>().text = "I am Jose, I will give you tasks, and you do them, are you ready to help the community now? \n \nPress the corresponding key to answer: \n1.) Yes \n2.) No";
      }
 
     private void Update()
