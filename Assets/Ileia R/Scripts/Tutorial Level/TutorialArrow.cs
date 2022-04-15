@@ -22,7 +22,7 @@ public class TutorialArrow : MonoBehaviour
         }
         if(Car.hasbeenincar == true)
         {
-            Debug.Log("HASBEENINCAR--------------------------------------------------------");
+            //Debug.Log("HASBEENINCAR--------------------------------------------------------");
             Vector3 vectorToTarget = transform.position - jose.transform.position;
             float angle = Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg;
             Quaternion q = Quaternion.AngleAxis(angle, Vector3.forward);
